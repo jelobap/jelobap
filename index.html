@@ -28,6 +28,10 @@
             font-size: 20px;
             margin-top: 20px;
         }
+        #videoContainer {
+            display: none;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -39,15 +43,21 @@
 
     <p id="responseMessage"></p>
 
+    <div id="videoContainer">
+        <iframe id="videoIframe" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
     <script>
         function respondYes() {
             document.getElementById("responseMessage").innerHTML = "Yay! You're my Valentine! ❤️ 😊";
-            window.open("https://youtu.be/kPa7bsKwL-c?si=K_dAYFyDebW2Kkkf", "_blank"); // Opens the 'Yes' video in a new tab
+            document.getElementById("videoIframe").src = "https://www.youtube.com/embed/kPa7bsKwL-c?si=K_dAYFyDebW2Kkkf"; // Set the 'Yes' video
+            document.getElementById("videoContainer").style.display = "block"; // Show the video
         }
 
         function respondNo() {
             document.getElementById("responseMessage").innerHTML = "Aww, maybe next time! 😢 🎤";
-            window.open("https://youtu.be/AtPrjYp75uA?si=gvJOLMDrs947Jsae", "_blank"); // Opens the 'No' video in a new tab
+            document.getElementById("videoIframe").src = "https://www.youtube.com/embed/AtPrjYp75uA?si=gvJOLMDrs947Jsae"; // Set the 'No' video
+            document.getElementById("videoContainer").style.display = "block"; // Show the video
         }
     </script>
 
