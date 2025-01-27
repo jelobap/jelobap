@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f7c6c7;
+        }
+        button {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #ff4f4f;
+        }
+        #responseMessage {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Will you be my Valentine?</h1>
+
+    <button onclick="respondYes()">Yes</button>
+    <button onclick="respondNo()">No</button>
+
+    <p id="responseMessage"></p>
+
+    <script>
+        function respondYes() {
+            document.getElementById("responseMessage").innerHTML = "Yay! You're my Valentine! ❤️ 😊";
+            window.open("https://youtu.be/kPa7bsKwL-c?si=K_dAYFyDebW2Kkkf", "_blank"); // Opens the 'Yes' video in a new tab
+        }
+
+        function respondNo() {
+            document.getElementById("responseMessage").innerHTML = "Aww, maybe next time! 😢 🎤";
+            window.open("https://youtu.be/AtPrjYp75uA?si=gvJOLMDrs947Jsae", "_blank"); // Opens the 'No' video in a new tab
+        }
+    </script>
+
+</body>
+</html>
